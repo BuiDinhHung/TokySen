@@ -797,8 +797,7 @@ export default function Home() {
         <div className="hero-content">
           <p className="hero-eyebrow">Berlin Mahlsdorf · Japanische &amp; Vietnamesische Küche</p>
           <p className="hero-title">TokySen</p>
-          <div className="hero-divider" />
-          <p className="hero-tagline">Tokyo trifft den Lotus</p>
+<p className="hero-tagline">Tokyo trifft den Lotus</p>
           <a className="outline-button hero-cta" href="#kontakt">Tisch reservieren</a>
         </div>
         <div className="hero-scroll">
