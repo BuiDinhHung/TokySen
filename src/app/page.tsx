@@ -1021,7 +1021,7 @@ export default function Home() {
             <a href="#">Impressum</a>
             <a href="#">AGB</a>
           </div>
-          <p>© 2026 TokySen Restaurant · Berlin Mahlsdorf</p>
+          <p>Copyright © 2026 Hoangcaster</p>
         </div>
       </footer>
     </main>
