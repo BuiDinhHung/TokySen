@@ -22,7 +22,12 @@ export default function RootLayout({
           rel="stylesheet"
         />
       </head>
-      <body>{children}</body>
+      <body>
+        {children}
+        <footer style={{ textAlign: "center", padding: "1.5rem", fontSize: "0.85rem", color: "#888", borderTop: "1px solid #eee", marginTop: "2rem" }}>
+          Copyright &copy; 2026 Hoangcaster
+        </footer>
+      </body>
     </html>
   );
 }

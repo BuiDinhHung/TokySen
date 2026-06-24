@@ -970,6 +970,20 @@ export default function Home() {
               </p>
             </div>
           </div>
+
+          {/* ── MAP ── */}
+          <div className="map-wrapper">
+            <iframe
+              allowFullScreen
+              className="map-frame"
+              height="420"
+              loading="lazy"
+              referrerPolicy="no-referrer-when-downgrade"
+              src="https://maps.google.com/maps?q=H%C3%B6nower+Str.+100%2C+12623+Berlin&output=embed&hl=de"
+              title="TokySen Restaurant – Standort"
+              width="100%"
+            />
+          </div>
         </section>
 
         {/* ── FOLLOW ── */}
