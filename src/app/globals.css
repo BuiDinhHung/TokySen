@@ -345,13 +345,6 @@ img, video { display: block; max-width: 100%; }
   padding-top: 56px;
 }
 
-.action-grid {
-  display: grid;
-  gap: 10px;
-  grid-template-columns: repeat(4, auto);
-  justify-content: center;
-  margin-bottom: 68px;
-}
 
 /* ─── TYPOGRAPHY ─────────────────────────────────────────── */
 
@@ -1064,8 +1057,6 @@ h2::before {
 
   .hero-title { font-size: clamp(52px, 12vw, 96px); }
 
-  .action-grid { grid-template-columns: repeat(2, minmax(140px, 1fr)); }
-
   .food-showcase { height: 70vh; min-height: 440px; max-width: 100%; }
 
   .collage-wrap { grid-template-columns: 1fr 1fr; }
@@ -1097,14 +1088,6 @@ h2::before {
   .section-shell { padding-left: 20px; padding-right: 20px; }
 
   .intro-section { padding-bottom: 52px; padding-top: 24px; }
-
-  .action-grid {
-    gap: 10px;
-    grid-template-columns: repeat(2, 1fr);
-    margin-bottom: 52px;
-  }
-
-  .action-grid .outline-button { min-width: 0; width: 100%; }
 
   h1 { font-size: 24px; margin-bottom: 28px; }
   h2 { font-size: 26px; margin-bottom: 32px; }

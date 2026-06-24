@@ -817,13 +817,6 @@ export default function Home() {
 
         {/* ── WELCOME ── */}
         <section className="intro-section section-shell fade-in" id="ueber-uns">
-          <div className="action-grid">
-            <ButtonLink href="#speisekarte">Speisekarte</ButtonLink>
-            <ButtonLink href="#sushi">Sushi</ButtonLink>
-            <ButtonLink href="#kontakt">Öffnungszeiten</ButtonLink>
-            <ButtonLink href="#kontakt">Anfahrt</ButtonLink>
-          </div>
-
           <h1>Herzlich willkommen bei Tokysen</h1>
           <ExpandableText
             more="Mit Tokysen möchten wir Ihnen in Mahlsdorf einen Ort bieten, an dem sorgfältig zubereitete Speisen auf eine warme und einladende Atmosphäre treffen. Als Familienunternehmen kochen wir seit über 30 Jahren mit Leidenschaft – besonders die Kunst des Sushi begleitet uns seit mehr als 20 Jahren. Ein Ort zum Ankommen, Genießen und Wohlfühlen."
