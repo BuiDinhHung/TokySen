@@ -438,23 +438,34 @@ const GETRAENKE_SECTIONS: MenuSubSection[] = [
     ],
   },
   {
-    title: "Aperitifs & Weine",
+    title: "Aperitifs",
     items: [
       { name: "Prosecco", allergens: "O", price: "0,10 l – 4,50 €" },
       { name: "Hugo", allergens: "O, 1", description: "Prosecco · Holunderblüte · Minze", price: "6,90 €" },
       { name: "Aperol Spritz", allergens: "O, 1, 4", description: "Aperol · Prosecco · Soda", price: "6,90 €" },
       { name: "Mango Spritz", allergens: "O", description: "Prosecco · Mango", price: "6,90 €" },
+      { name: "Rum Tonic", allergens: "8", price: "6,90 €" },
       { name: "Gin Tonic", allergens: "8", price: "6,90 €" },
       { name: "Campari", allergens: "1, 4", price: "4 cl – 4,50 €" },
       { name: "Campari Orange", allergens: "1, 4", price: "6,90 €" },
       { name: "Gin", price: "4 cl – 4,50 €" },
       { name: "Rum", price: "4 cl – 4,50 €" },
-      { name: "Riesling (Weißwein)", allergens: "O", price: "0,10 l – 3,90 € | 0,20 l – 5,90 € | 0,50 l – 14,90 €" },
-      { name: "Weißburgunder (Weißwein)", allergens: "O", price: "0,10 l – 3,90 € | 0,20 l – 5,90 € | 0,50 l – 14,90 €" },
-      { name: "Sauvignon Blanc (Weißwein)", allergens: "O", price: "0,10 l – 3,90 € | 0,20 l – 5,90 € | 0,50 l – 14,90 €" },
-      { name: "Chardonnay (Weißwein)", allergens: "O", price: "0,10 l – 3,90 € | 0,20 l – 5,90 € | 0,50 l – 14,90 €" },
-      { name: "Cabernet Sauvignon (Rotwein)", allergens: "O", price: "0,10 l – 3,90 € | 0,20 l – 5,90 € | 0,50 l – 14,90 €" },
-      { name: "Merlot (Rotwein)", allergens: "O", price: "0,10 l – 3,90 € | 0,20 l – 5,90 € | 0,50 l – 14,90 €" },
+    ],
+  },
+  {
+    title: "Weißweine",
+    items: [
+      { name: "Riesling", allergens: "O", price: "0,10 l – 3,90 € | 0,20 l – 5,90 € | 0,50 l – 14,90 €" },
+      { name: "Weißburgunder", allergens: "O", price: "0,10 l – 3,90 € | 0,20 l – 5,90 € | 0,50 l – 14,90 €" },
+      { name: "Sauvignon Blanc", allergens: "O", price: "0,10 l – 3,90 € | 0,20 l – 5,90 € | 0,50 l – 14,90 €" },
+      { name: "Chardonnay", allergens: "O", price: "0,10 l – 3,90 € | 0,20 l – 5,90 € | 0,50 l – 14,90 €" },
+    ],
+  },
+  {
+    title: "Rotweine",
+    items: [
+      { name: "Cabernet Sauvignon", allergens: "O", price: "0,10 l – 3,90 € | 0,20 l – 5,90 € | 0,50 l – 14,90 €" },
+      { name: "Merlot", allergens: "O", price: "0,10 l – 3,90 € | 0,20 l – 5,90 € | 0,50 l – 14,90 €" },
     ],
   },
 ];
@@ -731,7 +742,7 @@ export default function Home() {
           }
         });
       },
-      { threshold: 0.12 }
+      { threshold: 0, rootMargin: "0px 0px -10% 0px" }
     );
     const els = mainRef.current?.querySelectorAll(".fade-in") ?? [];
     els.forEach((el) => observer.observe(el));
@@ -808,7 +819,7 @@ export default function Home() {
 
       {/* ── ANNOUNCEMENT ── */}
       <a className="announcement" href="#kontakt">
-        <span>Täglich geöffnet</span> — Mo–Sa 11:00–22:00 Uhr · So 11:30–22:00 Uhr
+        <span>Täglich geöffnet</span> — Mo–Fr 11:00–22:00 Uhr · Sa, So &amp; Feiertage 11:30–22:00 Uhr
       </a>
 
       {/* ── PAPER SECTION ── */}
@@ -940,8 +951,8 @@ export default function Home() {
               </div>
               <h3>Öffnungszeiten</h3>
               <ul className="hours-list">
-                <li>Mo – Sa: 11:00 – 22:00 Uhr</li>
-                <li>So: 11:30 – 22:00 Uhr</li>
+                <li>Mo – Fr: 11:00 – 22:00 Uhr</li>
+                <li>Sa, So &amp; Feiertage: 11:30 – 22:00 Uhr</li>
               </ul>
             </div>
 
