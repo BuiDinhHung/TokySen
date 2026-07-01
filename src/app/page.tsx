@@ -500,6 +500,22 @@ const FOOD_IMAGES = [
   { src: "/images/món ăn thực tế 8.png",  alt: "Frisches Gericht – TokySen",       pos: "center 44%" },
   { src: "/images/món ăn thực tế 9.png",  alt: "Spezialrolle – TokySen",           pos: "center 40%" },
   { src: "/images/món ăn thực tế 10.png", alt: "Asiatische Küche – TokySen",       pos: "center 38%" },
+  ...Array.from({ length: 39 }, (_, i) => ({
+    src: `/images/món ăn mới ${i + 1}.jpeg`,
+    alt: "Gericht – TokySen",
+    pos: "center 42%",
+  })),
+];
+
+const INTERIOR_IMAGES = [
+  { src: "/images/không gian trong quán 1.png", alt: "Gemütliche Atmosphäre im TokySen Restaurant" },
+  { src: "/images/không gian trong quán.png",   alt: "Innenraum des TokySen Restaurants" },
+  { src: "/images/không gian trong quán 2.png", alt: "Weiterer Innenbereich des TokySen Restaurants" },
+  { src: "/images/mặt trước nhà hàng.png",       alt: "TokySen Restaurant – Außenansicht Hönower Str. 100" },
+  ...Array.from({ length: 7 }, (_, i) => ({
+    src: `/images/không gian mới ${i + 1}.jpeg`,
+    alt: "Innenbereich des TokySen Restaurants",
+  })),
 ];
 
 // ─── crane decoration ─────────────────────────────────────────────────────────
@@ -627,6 +643,7 @@ function FoodShowcase({ images }: { images: typeof FOOD_IMAGES }) {
     >
       {images.map((img, i) => (
         <div className={`showcase-slide${i === current ? " is-active" : ""}`} key={img.src}>
+          <div className="showcase-blur" style={{ backgroundImage: `url("${img.src}")` }} />
           <img alt={img.alt} src={img.src} style={{ objectPosition: img.pos }} />
         </div>
       ))}
@@ -911,30 +928,17 @@ export default function Home() {
 
         {/* ── PHOTO COLLAGE – Kibou landscape + portrait offset ── */}
         <div aria-label="TokySen Restaurant – Innenbereich" className="about-collage fade-in">
-          <div className="collage-wrap">
-            <div className="collage-item">
-              <img
-                alt="Gemütliche Atmosphäre im TokySen Restaurant"
-                src="/images/không gian trong quán 1.png"
-              />
-            </div>
-            <div className="collage-item">
-              <img
-                alt="Innenraum des TokySen Restaurants"
-                src="/images/không gian trong quán.png"
-              />
-            </div>
-            <div className="collage-item">
-              <img
-                alt="Weiterer Innenbereich des TokySen Restaurants"
-                src="/images/không gian trong quán 2.png"
-              />
-            </div>
-            <div className="collage-item">
-              <img
-                alt="TokySen Restaurant – Außenansicht Hönower Str. 100"
-                src="/images/mặt trước nhà hàng.png"
-              />
+          <div className="collage-strip">
+            <div className="collage-track">
+              {[...INTERIOR_IMAGES, ...INTERIOR_IMAGES].map((img, i) => (
+                <figure
+                  aria-hidden={i >= INTERIOR_IMAGES.length}
+                  className="strip-item"
+                  key={i}
+                >
+                  <img alt={img.alt} src={img.src} />
+                </figure>
+              ))}
             </div>
           </div>
         </div>

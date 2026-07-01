@@ -447,8 +447,20 @@ h2::before {
 
 .showcase-slide img {
   height: 100%;
-  object-fit: cover;
+  object-fit: contain;
+  position: relative;
   width: 100%;
+  z-index: 1;
+}
+
+.showcase-blur {
+  background-position: center;
+  background-size: cover;
+  filter: blur(28px) brightness(0.55);
+  inset: 0;
+  position: absolute;
+  transform: scale(1.15);
+  z-index: 0;
 }
 
 .showcase-slide.is-active {
@@ -552,25 +564,43 @@ h2::before {
   z-index: 2;
 }
 
-.collage-wrap {
-  display: grid;
-  gap: 14px;
-  grid-template-columns: 1fr 1fr;
-}
-
-.collage-item {
+.collage-strip {
   overflow: hidden;
 }
 
-.collage-item img {
-  height: 400px;
-  object-fit: cover;
-  object-position: center 35%;
-  transition: transform 700ms cubic-bezier(.4,0,.2,1);
-  width: 100%;
+.collage-track {
+  animation: collage-scroll 80s linear infinite;
+  display: flex;
+  width: max-content;
 }
 
-.collage-item:hover img { transform: scale(1.04); }
+.collage-strip:hover .collage-track {
+  animation-play-state: paused;
+}
+
+@keyframes collage-scroll {
+  to { transform: translateX(-50%); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .collage-track { animation: none; }
+}
+
+.strip-item {
+  flex: 0 0 auto;
+  height: 420px;
+  margin: 0 14px 0 0;
+  overflow: hidden;
+}
+
+.strip-item img {
+  display: block;
+  height: 100%;
+  transition: transform 700ms cubic-bezier(.4,0,.2,1);
+  width: auto;
+}
+
+.strip-item:hover img { transform: scale(1.04); }
 
 /* ─── MENU SECTION ───────────────────────────────────────── */
 
@@ -1074,10 +1104,6 @@ h2::before {
 
   .food-showcase { height: 70vh; min-height: 440px; max-width: 100%; }
 
-  .collage-wrap { grid-template-columns: 1fr 1fr; }
-
-  .collage-item img { height: 280px; }
-
   .contact-grid { grid-template-columns: 1fr; max-width: 380px; }
 }
 
@@ -1120,12 +1146,7 @@ h2::before {
 
   .about-collage { margin-bottom: 56px; padding: 0 20px; }
 
-  .collage-wrap {
-    grid-template-columns: 1fr 1fr;
-    gap: 8px;
-  }
-
-  .collage-item img { height: 200px; }
+  .strip-item { height: 280px; margin-right: 10px; }
 
   .menu-grid { grid-template-columns: 1fr; }
 
