@@ -128,7 +128,7 @@ const VORSPEISEN_SECTIONS: MenuSubSection[] = [
           { label: "Garnelen (D)", price: "5,50 €" },
         ],
       },
-      { id: "12", name: "Mini Frühlingsrollen", allergens: "A", note: "7 Stück", description: "Knusprig frittierte Frühlingsrollen mit Gemüse, serviert mit süß-sauer Soße.", price: "4,50 €" },
+      { id: "12", name: "Mini Frühlingsrollen", allergens: "A", note: "7 Stück", description: "Knusprig frittierte Frühlingsrollen aus dünnem Teig, gefüllt mit Gemüse, serviert mit süß-sauer Soße.", price: "4,50 €" },
       { id: "13", name: "Dim Sum", allergens: "A, B, K", note: "4 Stück", description: "Gedämpfte Teigtaschen mit Garnelenfüllung.", price: "4,90 €" },
       { id: "14", name: "Gyoza", allergens: "A, F, K", note: "5 Stück", description: "Gebratene Teigtaschen mit Hähnchenfüllung.", price: "4,90 €" },
       { id: "15", name: "Yakitori", allergens: "A, F, K", note: "3 Stück", description: "Gegrillte Hähnchenspieße, mit Sesam verfeinert, serviert mit Yakitori-Soße.", price: "5,50 €" },
@@ -209,18 +209,18 @@ const SUSHI_SECTIONS: MenuSubSection[] = [
     items: [
       { id: "M1", name: "Avocado Maki", description: "Avocado", price: "4,50 €" },
       { id: "M2", name: "Kappa Maki", allergens: "K", description: "Gurke", price: "4,50 €" },
-      { id: "M3", name: "Spargel Maki", allergens: "K", description: "Spargel", price: "4,50 €" },
+      { id: "M3", name: "Salmonskin Maki", allergens: "D", description: "Gegrillte Lachshaut", price: "4,50 €" },
       { id: "M4", name: "Oshinko Maki", allergens: "1, 4, 6, F, K", description: "Eingelegter Rettich", price: "4,50 €" },
       { id: "M5", name: "Inari Maki", allergens: "1, A, F, K", description: "Süßlich marinierte Tofutasche", price: "4,50 €" },
       { id: "M6", name: "Tamago Maki", allergens: "C", description: "Japanisches Omelett", price: "4,50 €" },
       { id: "M7", name: "Ebi Maki", allergens: "B", description: "Großgarnelen", price: "4,90 €" },
       { id: "M8", name: "Sake Maki", allergens: "D", description: "Lachs", price: "4,90 €" },
       { id: "M9", name: "Sake Avocado Maki", allergens: "D", description: "Lachs · Avocado", price: "4,90 €" },
-      { id: "M10", name: "Tekka Maki", allergens: "D", description: "Thunfisch", price: "5,50 €" },
-      { id: "M11", name: "Tekka Avocado Maki", allergens: "D", description: "Thunfisch · Avocado", price: "5,50 €" },
-      { id: "M12", name: "Tuna Maki (gegart)", allergens: "C, D, K", description: "Gegarter Thunfisch · Lauch · japanische Mayonnaise", price: "4,90 €" },
-      { id: "M13", name: "Unagi Kappa Maki", allergens: "A, D, F", description: "Süßwasseraal · Gurke", price: "5,50 €" },
-      { id: "M14", name: "California Maki", allergens: "1, 2, 4, 5, D, A, C, F, K", description: "Surimi · Avocado · Gurke", price: "4,90 €" },
+      { id: "M10", name: "California Maki", allergens: "1, 2, 4, 5, D, A, C, F, K", description: "Surimi · Avocado · Gurke", price: "4,90 €" },
+      { id: "M11", name: "Tuna Maki (gegart)", allergens: "C, D, K", description: "Gegarter Thunfisch · Lauch · japanische Mayonnaise", price: "4,90 €" },
+      { id: "M12", name: "Tekka Maki", allergens: "D", description: "Thunfisch", price: "5,50 €" },
+      { id: "M13", name: "Tekka Avocado Maki", allergens: "D", description: "Thunfisch · Avocado", price: "5,50 €" },
+      { id: "M14", name: "Unagi Kappa Maki", allergens: "A, D, F", description: "Süßwasseraal · Gurke", price: "5,50 €" },
     ],
   },
   {
@@ -228,15 +228,16 @@ const SUSHI_SECTIONS: MenuSubSection[] = [
     sectionNote: "8 Stück – Sushi-Rolle mit Reis außen und Sesam",
     items: [
       { id: "S1", name: "California Inside-Out Roll", allergens: "1, 2, 4, 5, A, B, C, D, F, K", description: "Surimi · Avocado · japanische Mayonnaise", price: "7,90 €" },
-      { id: "S2", name: "Ebi Inside-Out Roll", allergens: "B, K", description: "Großgarnelen · Gurke · Avocado", price: "8,50 €" },
-      { id: "S3", name: "Unagi Inside-Out Roll", allergens: "A, D, F, K", description: "Gegrillter Süßwasseraal · Gurke · Avocado", price: "8,90 €" },
-      { id: "S4", name: "Salmon Inside-Out Roll", allergens: "D, G, K", description: "Lachs · Avocado · Frischkäse", price: "8,50 €" },
-      { id: "S5", name: "Gegartes Salmon Inside-Out Roll", allergens: "D, G, K", description: "Gegarter Lachs · Avocado · Frischkäse", price: "7,90 €" },
-      { id: "S6", name: "Spicy Salmon Inside-Out Roll", allergens: "D, K", description: "Lachs · Gurke · scharfe Soße", price: "8,50 €" },
-      { id: "S7", name: "Rucola Salmon Inside-Out Roll", allergens: "D, G, K", description: "Rucola · Lachs · Frischkäse", price: "8,50 €" },
-      { id: "S8", name: "Tuna Inside-Out Roll", allergens: "D, K", description: "Thunfisch · Avocado", price: "8,90 €" },
-      { id: "S9", name: "Gegartes Tuna Inside-Out Roll", allergens: "C, D, K", description: "Gegarter Thunfisch · Avocado · japanische Mayonnaise", price: "7,90 €" },
-      { id: "S10", name: "Spicy Tuna Inside-Out Roll", allergens: "D, K", description: "Thunfisch Tatar · Lauchzwiebeln · Gurke · scharfe Soße", price: "8,90 €" },
+      { id: "S2", name: "Salmonskin Inside-Out Roll", allergens: "D, G, K", description: "Gegrillte Lachshaut · Gurke · Frischkäse", price: "7,90 €" },
+      { id: "S3", name: "Gegartes Salmon Inside-Out Roll", allergens: "D, G, K", description: "Gegarter Lachs · Avocado · Frischkäse", price: "7,90 €" },
+      { id: "S4", name: "Ebi Inside-Out Roll", allergens: "B, K", description: "Großgarnelen · Gurke · Avocado", price: "8,50 €" },
+      { id: "S5", name: "Unagi Inside-Out Roll", allergens: "A, D, F, K", description: "Gegrillter Süßwasseraal · Gurke · Avocado", price: "8,90 €" },
+      { id: "S6", name: "Salmon Inside-Out Roll", allergens: "D, G, K", description: "Lachs · Avocado · Frischkäse", price: "8,50 €" },
+      { id: "S7", name: "Spicy Salmon Inside-Out Roll", allergens: "D, K", description: "Lachs · Gurke · Cocktailsoße", price: "8,50 €" },
+      { id: "S8", name: "Rucola Salmon Inside-Out Roll", allergens: "D, G, K", description: "Rucola · Lachs · Frischkäse", price: "8,50 €" },
+      { id: "S9", name: "Tuna Inside-Out Roll", allergens: "D, K", description: "Thunfisch · Avocado", price: "8,90 €" },
+      { id: "S10", name: "Gegartes Tuna Inside-Out Roll", allergens: "C, D, K", description: "Gegarter Thunfisch · Avocado · japanische Mayonnaise", price: "7,90 €" },
+      { id: "S11", name: "Spicy Tuna Inside-Out Roll", allergens: "D, K", description: "Thunfisch Tatar · Lauchzwiebeln · Cocktailsoße", price: "8,90 €" },
     ],
   },
   {
@@ -245,17 +246,16 @@ const SUSHI_SECTIONS: MenuSubSection[] = [
     items: [
       { id: "S15", name: "Avocado Inside-Out Roll", allergens: "G, K", description: "Avocado · Gurke · Frischkäse", price: "6,90 €" },
       { id: "S16", name: "Rucola Inside-Out Roll", allergens: "G, K", description: "Rucola · Gurke · Frischkäse", price: "6,90 €" },
-      { id: "S17", name: "Spargel Inside-Out Roll", allergens: "G, K", description: "Spargel · Gurke · Frischkäse", price: "6,90 €" },
-      { id: "S18", name: "Tamago Inside-Out Roll", allergens: "C, K", description: "Japanisches Omelett · Avocado · Gurke", price: "6,90 €" },
+      { id: "S17", name: "Tamago Inside-Out Roll", allergens: "C, K", description: "Japanisches Omelett · Avocado · Gurke", price: "6,90 €" },
     ],
   },
   {
     title: "Temaki",
     sectionNote: "1 Stück – Nori-Blatt Tüte mit Sushi-Reis, Zutat und Sesam",
     items: [
-      { id: "S20", name: "Ebi Temaki", allergens: "B, K", description: "Großgarnelen · Avocado", price: "4,90 €" },
-      { id: "S21", name: "Salmon Temaki", allergens: "D, K", description: "Lachs · Avocado · Flugfischrogen", price: "4,90 €" },
-      { id: "S22", name: "Tuna Temaki", allergens: "D, K", description: "Thunfisch · Avocado · Flugfischrogen", price: "5,50 €" },
+      { id: "S20", name: "Ebi Temaki", allergens: "B, K", description: "Großgarnelen · Avocado", price: "5,50 €" },
+      { id: "S21", name: "Salmon Temaki", allergens: "D, K", description: "Lachs · Avocado · Flugfischrogen", price: "5,50 €" },
+      { id: "S22", name: "Tuna Temaki", allergens: "D, K", description: "Thunfisch · Avocado · Flugfischrogen", price: "5,90 €" },
     ],
   },
   {
@@ -264,13 +264,13 @@ const SUSHI_SECTIONS: MenuSubSection[] = [
     items: [
       { id: "S30", name: "Green Roll", allergens: "G, K", description: "Rucola · Gurke · Frischkäse | umhüllt mit Avocado", price: "9,90 €" },
       { id: "S31", name: "Golden Roll", allergens: "D, G, K", description: "Avocado · Gurke · Rucola · Frischkäse | umhüllt mit Lachs", price: "10,90 €" },
-      { id: "S32", name: "Red Tuna Roll", allergens: "D, G, K", description: "Spargel · Gurke · Frischkäse | umhüllt mit Thunfisch · Koriandersalat", price: "10,90 €" },
+      { id: "S32", name: "Red Tuna Roll", allergens: "D, G, K", description: "Gegrillte Lachshaut · Gurke · Frischkäse | umhüllt mit Thunfisch · Koriandersalat", price: "10,90 €" },
       { id: "S33", name: "Yakitori Roll", allergens: "A, F, K", description: "Japanischer Hähnchenspieß · Gurke | umhüllt mit Avocado", price: "10,90 €" },
       { id: "S34", name: "Black Tiger Roll", allergens: "B, D, G, K", description: "Knusprig frittierte Großgarnelen · Frischkäse | umhüllt mit Süßwasseraal", price: "11,90 €" },
       { id: "S35", name: "Lachs Tempura Roll", allergens: "B, D, G, K", description: "Knusprig frittierter Lachs · Frischkäse | umhüllt mit Großgarnele", price: "10,90 €" },
       { id: "S36", name: "Beef Sweet Potato Roll", allergens: "A, F, K", description: "Süßkartoffel · Avocado | umhüllt mit Rindfleisch · Koriandersalat", price: "11,90 €" },
-      { id: "S37a", name: "Rainbow Roll", allergens: "1, 2, 4, 5, A, B, C, D, F, K", description: "Surimi · Gurke · Avocado | umhüllt mit Lachs · Thunfisch · Avocado", price: "11,90 €" },
-      { id: "S37b", name: "My Best Roll", allergens: "D, G, K", description: "Lachs · Avocado · Frischkäse | umhüllt mit Lachs · Thunfisch · Großgarnelen", price: "11,90 €" },
+      { id: "S37", name: "Rainbow Roll", allergens: "1, 2, 4, 5, A, B, C, D, F, K", description: "Surimi · Gurke · Avocado | umhüllt mit Lachs · Thunfisch · Avocado", price: "11,90 €" },
+      { id: "S38", name: "My Best Roll", allergens: "D, G, K", description: "Lachs · Avocado · Frischkäse | umhüllt mit Lachs · Thunfisch · Großgarnelen", price: "11,90 €" },
     ],
   },
   {
@@ -282,7 +282,7 @@ const SUSHI_SECTIONS: MenuSubSection[] = [
       { id: "S42", name: "Crispy Tuna Roll", allergens: "A, C, F, G, K", description: "Gegarter Thunfisch · Gurke · Frischkäse · Lauchzwiebeln", price: "8,50 €" },
       { id: "S43", name: "Crispy Chicken Roll", allergens: "A, C, F, K", description: "Hühnchen Tempura · Gurke · Lauchzwiebeln", price: "8,90 €" },
       { id: "S44", name: "Crispy Duck Roll", allergens: "A, C, F, K", description: "Enten Tempura · Gurke · Lauchzwiebeln", price: "8,90 €" },
-      { id: "S45", name: "Mini Crispy Roll", allergens: "A, C, F, K", note: "8 Stück", description: "Maki-Rolle, paniert und knusprig frittiert, verfeinert mit Sesam, Unagi- und Cocktailsoße.", price: "5,50 €" },
+      { id: "S45", name: "Mini Crispy Roll", allergens: "A, C, F, K", note: "8 Stück", description: "Maki-Rolle, paniert und knusprig frittiert, verfeinert mit Sesam, Unagi- und Cocktailsoße.", price: "5,90 €" },
     ],
   },
   {
@@ -293,21 +293,21 @@ const SUSHI_SECTIONS: MenuSubSection[] = [
       { id: "S51", name: "Tuna Sashimi", allergens: "D", note: "8 Stück", description: "Frisches Thunfischfilet, pur serviert", price: "13,90 €" },
       { id: "S52", name: "Sake & Tuna Sashimi", allergens: "D", note: "8 Stück", description: "Lachs · Thunfisch, frisch und pur serviert", price: "12,90 €" },
       { id: "S53", name: "Mix Sashimi", allergens: "D, B", note: "8 Stück", description: "Lachs · Thunfisch · Großgarnelen, frisch und pur serviert", price: "13,90 €" },
-      { id: "S54", name: "Aburi Sashimi", allergens: "D", note: "9 Stück", description: "Flambierter Lachs · Flambierter Thunfisch, leicht angeflammt und aromatisch serviert", price: "14,90 €" },
+      { id: "S54", name: "Aburi Sashimi", allergens: "D", note: "8 Stück", description: "Flambierter Lachs · Flambierter Thunfisch, leicht angeflammt und aromatisch serviert", price: "14,90 €" },
     ],
   },
   {
     title: "Sushi Sets",
     items: [
-      { name: "I Love Veggie", allergens: "A, C, F, K", description: "8 Avocado Maki · 8 Kappa Maki · 4 Veggie Crispy Big Roll", price: "11,90 €" },
       { name: "I Love Maki", allergens: "B, D", description: "8 Avocado Maki · 8 Ebi Maki · 8 Sake Maki", price: "11,90 €" },
+      { name: "I Love Veggie", allergens: "A, C, F, K", description: "8 Avocado Maki · 8 Kappa Maki · 8 Veggie Crispy Big Roll", price: "13,90 €" },
       { name: "I Love Salmon", allergens: "D, G, K", description: "2 Sake Nigiri · 8 Sake Maki · 8 Salmon Inside-Out", price: "14,90 €" },
       { name: "Spring Set", allergens: "B, D, G, K", description: "1 Ebi Nigiri · 1 Sake Nigiri · 1 Maguro Nigiri · 4 Avocado Maki · 4 Kappa Maki · 4 Salmon Inside-Out", price: "12,90 €" },
       { name: "Salmon Set (gekocht)", allergens: "A, C, D, G, F, K", description: "8 Sake Maki · 8 Salmon Inside-Out · 8 Crispy Salmon Roll", price: "14,90 €" },
       { name: "Tuna Set (gekocht)", allergens: "A, C, D, G, F, K", description: "8 Tuna Maki · 8 Tuna Inside-Out · 8 Crispy Tuna Roll", price: "14,90 €" },
-      { name: "Kizuna Set", allergens: "A, C, F, K", note: "für 2 Personen", description: "8 Avocado Maki · 8 Sake Maki · 2 Ebi Nigiri · 2 Sake Nigiri · 2 Maguro Nigiri · 8 Black Tiger Roll · 8 Crispy Chicken Roll", price: "34,90 €" },
-      { name: "Tomodachi Set", allergens: "A, C, D, F, G, K", note: "für 3 Personen", description: "1 Tamago Nigiri · 1 Ebi Nigiri · 1 Sake Nigiri · 1 Maguro Nigiri · 4 Avocado Maki · 4 Kappa Maki · 4 Sake Maki · 4 Tekka Maki · 4 Avocado Inside-Out · 4 Salmon Inside-Out · 8 My Best Roll · 16 Crispy Veggie Roll · 16 Crispy Salmon Roll", price: "49,90 €" },
-      { name: "Kazoku Set", allergens: "A, C, D, F, G, K", note: "für 4 Personen", description: "8 Avocado Maki · 8 Kappa Maki · 8 Sake Maki · 8 Tekka Maki · 2 Ebi Nigiri · 2 Sake Nigiri · 2 Maguro Nigiri · 8 Salmon Inside-Out · 8 Rainbow Roll · 8 Crispy Chicken Roll · 8 Crispy Duck Roll · 8 Sake Sashimi", price: "64,90 €" },
+      { name: "Kizuna Set", allergens: "A, C, F, K", note: "für 2 Personen empfohlen", description: "8 Avocado Maki · 8 Sake Maki · 2 Ebi Nigiri · 2 Sake Nigiri · 2 Maguro Nigiri · 8 Black Tiger Roll · 8 Crispy Chicken Roll", price: "34,90 €" },
+      { name: "Tomodachi Set", allergens: "A, C, D, F, G, K", note: "für 3 Personen empfohlen", description: "1 Tamago Nigiri · 1 Ebi Nigiri · 1 Sake Nigiri · 1 Maguro Nigiri · 4 Avocado Maki · 4 Kappa Maki · 4 Sake Maki · 4 Tekka Maki · 4 Avocado Inside-Out · 4 Salmon Inside-Out · 8 My Best Roll · 8 Crispy Veggie Roll · 8 Crispy Salmon Roll", price: "49,90 €" },
+      { name: "Kazoku Set", allergens: "A, C, D, F, G, K", note: "für 4 Personen empfohlen", description: "8 Avocado Maki · 8 Kappa Maki · 4 Sake Maki · 4 Tekka Maki · 2 Ebi Nigiri · 2 Sake Nigiri · 2 Maguro Nigiri · 8 Salmon Inside-Out · 8 Rainbow Roll · 8 Crispy Chicken Roll · 8 Crispy Duck Roll · 8 Sake Sashimi", price: "64,90 €" },
     ],
   },
 ];
@@ -316,12 +316,13 @@ const DESSERT_SECTIONS: MenuSubSection[] = [
   {
     title: "Desserts",
     items: [
-      { id: "D1", name: "Chuối Chiên", allergens: "A, K", description: "Frittierte Banane im knusprigen Teigmantel, verfeinert mit Honig und Sesam.", price: "4,00 €" },
-      { id: "D2", name: "Mochi", description: "Japanischer Klebreiskuchen mit weicher Füllung.", price: "4,50 €" },
-      { id: "D3", name: "Matcha Eis", allergens: "C, G", description: "Japanisches Grüntee-Eis.", price: "4,50 €" },
-      { id: "D4", name: "Lava Cake", allergens: "A, C, F, G", description: "Warmer Schokoladenkuchen mit flüssigem Schokoladenkern.", price: "4,50 €" },
-      { id: "D5", name: "Bánh Chuối", allergens: "E, K", description: "Gedämpfter vietnamesischer Bananen-Klebreiskuchen mit Kokosmilch, garniert mit Sesam und Erdnüssen.", price: "4,50 €" },
-      { id: "D6", name: "Xôi Xoài", allergens: "E, K", description: "Vietnamesischer Klebreis mit frischer Mango, Kokosmilch, garniert mit Sesam und Erdnüssen.", price: "5,00 €" },
+      { id: "D1", name: "Chuối Chiên", allergens: "A, K", description: "Frittierte Banane im knusprigen Teigmantel, verfeinert mit Honig und Sesam.", price: "4,50 €" },
+      { id: "D2", name: "Táo Chiên", allergens: "A, K", description: "Frittierter Apfel im knusprigen Teigmantel, verfeinert mit Honig und Sesam.", price: "4,50 €" },
+      { id: "D3", name: "Mochi", description: "Japanischer Klebreiskuchen mit weicher Füllung.", price: "4,50 €" },
+      { id: "D4", name: "Matcha Eis", allergens: "C, G", description: "Japanisches Grüntee-Eis.", price: "4,50 €" },
+      { id: "D5", name: "Lava Cake", allergens: "A, C, F, G", description: "Warmer Schokoladenkuchen mit flüssigem Schokoladenkern.", price: "4,50 €" },
+      { id: "D6", name: "Bánh Chuối", allergens: "E, K", description: "Gedämpfter vietnamesischer Bananen-Klebreiskuchen mit Kokosmilch, garniert mit Sesam und Erdnüssen.", price: "4,50 €" },
+      { id: "D7", name: "Xôi Xoài", allergens: "E, K", description: "Vietnamesischer Klebreis mit frischer Mango, Kokosmilch, garniert mit Sesam und Erdnüssen.", price: "5,00 €" },
     ],
   },
   {
@@ -355,8 +356,8 @@ const GETRAENKE_SECTIONS: MenuSubSection[] = [
       { name: "Ginger Ale", allergens: "1, 4", price: "0,25 l – 2,90 € | 0,40 l – 4,50 €" },
       { name: "Bitter Lemon", allergens: "8", price: "0,25 l – 2,90 € | 0,40 l – 4,50 €" },
       { name: "Tonic Water", allergens: "8", price: "0,25 l – 2,90 € | 0,40 l – 4,50 €" },
-      { name: "Stilles Wasser", price: "0,30 l – 2,90 € | 0,75 l – 5,90 €" },
-      { name: "Sprudelwasser", price: "0,30 l – 2,90 € | 0,75 l – 5,90 €" },
+      { name: "Stilles Wasser", price: "0,30 l – 2,90 € | 0,75 l (Flasche) – 5,90 €" },
+      { name: "Sprudelwasser", price: "0,30 l – 2,90 € | 0,75 l (Flasche) – 5,90 €" },
     ],
   },
   {
@@ -417,10 +418,10 @@ const GETRAENKE_SECTIONS: MenuSubSection[] = [
     title: "Cocktails",
     items: [
       { name: "Mojito", description: "Weißer Rum · Minze · Limette · brauner Zucker · Soda", price: "6,90 €" },
-      { name: "Rum Tonic", allergens: "8", description: "Weißer Rum · Tonic Water", price: "6,90 €" },
-      { name: "Island Flow", description: "Weißer Rum · Maracuja · Orange · Ananas", price: "6,90 €" },
-      { name: "Double Passion", description: "Brauner Rum · Weißer Rum · Zuckersirup · Zitrone · Maracuja", price: "6,90 €" },
-      { name: "Almond Sunset", allergens: "H, 1", description: "Havana Club · Orange · Maracuja · Limette · Mandelsirup", price: "6,90 €" },
+      { name: "Gin Tonic", allergens: "8", description: "Gin · Tonic Water", price: "6,90 €" },
+      { name: "Island Flow", description: "Weißer Rum · Maracuja · Orange · Ananas", price: "7,50 €" },
+      { name: "Double Passion", description: "Brauner Rum · Weißer Rum · Zuckersirup · Zitrone · Maracuja", price: "7,50 €" },
+      { name: "Almond Sunset", allergens: "H, 1", description: "Havana Club · Orange · Maracuja · Limette · Mandelsirup", price: "7,50 €" },
     ],
   },
   {
@@ -440,32 +441,30 @@ const GETRAENKE_SECTIONS: MenuSubSection[] = [
   {
     title: "Aperitifs",
     items: [
-      { name: "Prosecco", allergens: "O", price: "0,10 l – 4,50 €" },
-      { name: "Hugo", allergens: "O, 1", description: "Prosecco · Holunderblüte · Minze", price: "6,90 €" },
-      { name: "Aperol Spritz", allergens: "O, 1, 4", description: "Aperol · Prosecco · Soda", price: "6,90 €" },
-      { name: "Mango Spritz", allergens: "O", description: "Prosecco · Mango", price: "6,90 €" },
-      { name: "Rum Tonic", allergens: "8", price: "6,90 €" },
-      { name: "Gin Tonic", allergens: "8", price: "6,90 €" },
+      { name: "Prosecco", allergens: "L", price: "0,10 l – 4,50 €" },
+      { name: "Pflaumenwein", allergens: "L", price: "0,10 l – 4,50 €" },
       { name: "Campari", allergens: "1, 4", price: "4 cl – 4,50 €" },
+      { name: "Gin oder Rum", price: "4 cl – 4,50 €" },
+      { name: "Hugo", allergens: "L, 1", description: "Prosecco · Holunderblüte · Minze", price: "6,90 €" },
+      { name: "Aperol Spritz", allergens: "L, 1, 4", description: "Aperol · Prosecco · Soda", price: "6,90 €" },
+      { name: "Mango Spritz", allergens: "L", description: "Prosecco · Mango", price: "6,90 €" },
       { name: "Campari Orange", allergens: "1, 4", price: "6,90 €" },
-      { name: "Gin", price: "4 cl – 4,50 €" },
-      { name: "Rum", price: "4 cl – 4,50 €" },
     ],
   },
   {
     title: "Weißweine",
     items: [
-      { name: "Riesling", allergens: "O", price: "0,10 l – 3,90 € | 0,20 l – 5,90 € | 0,50 l – 14,90 €" },
-      { name: "Weißburgunder", allergens: "O", price: "0,10 l – 3,90 € | 0,20 l – 5,90 € | 0,50 l – 14,90 €" },
-      { name: "Sauvignon Blanc", allergens: "O", price: "0,10 l – 3,90 € | 0,20 l – 5,90 € | 0,50 l – 14,90 €" },
-      { name: "Chardonnay", allergens: "O", price: "0,10 l – 3,90 € | 0,20 l – 5,90 € | 0,50 l – 14,90 €" },
+      { name: "Riesling", allergens: "L", price: "0,10 l – 3,90 € | 0,20 l – 6,90 € | 0,50 l – 14,90 €" },
+      { name: "Weißburgunder", allergens: "L", price: "0,10 l – 3,90 € | 0,20 l – 6,90 € | 0,50 l – 14,90 €" },
+      { name: "Sauvignon Blanc", allergens: "L", price: "0,10 l – 3,90 € | 0,20 l – 6,90 € | 0,50 l – 14,90 €" },
+      { name: "Chardonnay", allergens: "L", price: "0,10 l – 3,90 € | 0,20 l – 6,90 € | 0,50 l – 14,90 €" },
     ],
   },
   {
     title: "Rotweine",
     items: [
-      { name: "Cabernet Sauvignon", allergens: "O", price: "0,10 l – 3,90 € | 0,20 l – 5,90 € | 0,50 l – 14,90 €" },
-      { name: "Merlot", allergens: "O", price: "0,10 l – 3,90 € | 0,20 l – 5,90 € | 0,50 l – 14,90 €" },
+      { name: "Cabernet Sauvignon", allergens: "L", price: "0,10 l – 3,90 € | 0,20 l – 6,90 € | 0,50 l – 14,90 €" },
+      { name: "Merlot", allergens: "L", price: "0,10 l – 3,90 € | 0,20 l – 6,90 € | 0,50 l – 14,90 €" },
     ],
   },
 ];
@@ -895,6 +894,8 @@ export default function Home() {
               <div>6 – Süßungsmittel</div>
               <div>7 – koffeinhaltig</div>
               <div>8 – chininhaltig</div>
+              <div>9 – geschwärzt</div>
+              <div>10 – enthält Phenylalaninquelle</div>
               <div>A – Glutenhaltiges Getreide</div>
               <div>B – Krebstiere</div>
               <div>C – Eier</div>
@@ -903,9 +904,12 @@ export default function Home() {
               <div>F – Soja</div>
               <div>G – Milch & Milchprodukte</div>
               <div>H – Schalenfrüchte</div>
+              <div>I – Sellerie</div>
+              <div>J – Senf</div>
               <div>K – Sesamsamen</div>
+              <div>L – Schwefeldioxid & Sulfite</div>
+              <div>M – Lupinen</div>
               <div>N – Weichtiere</div>
-              <div>O – Sulfite</div>
             </div>
           </div>
         </section>
