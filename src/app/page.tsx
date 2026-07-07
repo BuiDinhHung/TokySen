@@ -862,7 +862,9 @@ function CartDrawer({
       `*Gesamt: ${formatEuro(total)}*` +
       (notes.trim() ? `\n\n📝 Anmerkungen: ${notes.trim()}` : "");
 
-    const url = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(message)}`;
+    // Direkt api.whatsapp.com verwenden: wa.me wandelt bei der Weiterleitung
+    // %20 (Leerzeichen) in "+" um, wodurch die Nachricht "+"-Zeichen enthält.
+    const url = `https://api.whatsapp.com/send?phone=${WHATSAPP_NUMBER}&text=${encodeURIComponent(message)}`;
     window.open(url, "_blank", "noopener,noreferrer");
   };
 
