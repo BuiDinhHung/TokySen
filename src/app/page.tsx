@@ -549,7 +549,6 @@ const FOOD_IMAGES = [
   { src: "/images/món ăn thực tế 5.png",  alt: "Sushi Auswahl – TokySen",          pos: "center 42%" },
   { src: "/images/món ăn thực tế 6.png",  alt: "Vietnamesische Küche – TokySen",   pos: "center 42%" },
   { src: "/images/món ăn thực tế 7.png",  alt: "Japanische Spezialität – TokySen", pos: "center 44%" },
-  { src: "/images/món ăn thực tế 8.png",  alt: "Frisches Gericht – TokySen",       pos: "center 44%" },
   { src: "/images/món ăn thực tế 9.png",  alt: "Spezialrolle – TokySen",           pos: "center 40%" },
   { src: "/images/món ăn thực tế 10.png", alt: "Asiatische Küche – TokySen",       pos: "center 38%" },
   ...Array.from({ length: 39 }, (_, i) => ({
