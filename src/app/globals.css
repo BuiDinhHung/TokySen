@@ -728,7 +728,7 @@ h2::before {
 }
 
 .menu-item-desc {
-  color: var(--stone);
+  color: var(--ink);
   font-size: 16px;
   line-height: 1.55;
   margin: 0 0 6px;
